@@ -3,8 +3,12 @@ var $div = document.getElementById("gradient");
 
 // rgb vals of the gradients
 var gradients = [
-  { start: [0, 0, 50],   stop: [0, 0, 75] },
-  { start: [0, 0, 75],   stop: [25, 0, 75] }
+  { start: [0, 0, 50],   stop: [0, 0, 100] },
+  { start: [0, 0, 100],  stop: [50, 0, 100] },
+  { start: [50, 0, 100], stop: [50, 0, 150] },
+  { start: [50, 0, 150], stop: [50, 0, 100] },
+  { start: [50, 0, 100], stop: [0, 0, 100] },
+  { start: [0, 0, 100], stop: [0, 0, 50] }
 ];
 
 // how long for each transition
@@ -106,7 +110,7 @@ function updateGradient() {
 
   // we did another step
   stepsCount++;
-  
+
   // did we do too many steps?
   if (stepsCount > stepsTotal) {
     // reset steps count
